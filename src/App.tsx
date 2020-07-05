@@ -5,6 +5,11 @@ import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 
+// Single Components Required
+import Launchcomponent from "./components/singles/launch"
+import Launchpadcomponent from "./components/singles/launchpad"
+import Shipcomponent from "./components/singles/ship"
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -32,8 +37,14 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            <Route path="/page/:name" component={Page} exact />
-            <Redirect from="/" to="/page/Inbox" exact />
+            <Route path="/page/launches" component={Page} exact />
+            <Route path="/page/launchpads" component={Page} exact />
+            <Route path="/page/ships" component={Page} exact />
+            {/* Single Variable Params */}
+            <Route path="/page/launch/:id" component={Launchcomponent} exact />
+            <Route path="/page/launchpad/:id" component={Launchpadcomponent} exact />
+            <Route path="/page/ship/:id" component={Shipcomponent} exact />
+            <Redirect from="/" to="/page/lauches" exact />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
