@@ -1,21 +1,55 @@
-import React from 'react';
-import { IonButton , IonCard } from '@ionic/react';
-
+import React from "react";
+import {
+  IonButton,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCard,
+  IonCardContent,
+  IonRouterLink,
+  IonItem,
+  IonBadge,
+} from "@ionic/react";
 interface LaunchpadCardProps {
-  flight_number : string;
-  details : string;
-  mission_name  :string;
+  id: number;
+  flight_number: string;
+  details: string;
+  mission_name: string;
+  location: {
+    name: string;
+  };
+  vehicles_launched: [];
+  site_id: string;
 }
 
 const Launchpadcard: React.FC<LaunchpadCardProps> = ({
-  flight_number,details,mission_name
+  id,
+  location,
+  details,
+  vehicles_launched,
+  site_id,
 }) => {
-  return(
-    <IonCard>
-        <h4>Flight No : {flight_number}</h4>
-        <h4>Details: {details}</h4>
-        <h4>missionName : {mission_name}</h4>
-    </IonCard>
-  )
-}
+  return (
+    <IonItem routerLink={`/page/launchpad/${id}`}>
+      <IonCard>
+        <IonCardHeader>
+          <IonItem class='ion-no-margin'>
+            <h3 ion-text='true' color='secondary'>
+              {location.name}
+            </h3>
+
+            <IonBadge slot='end' color='warning'>
+              {"NOne Vehicle HEre"}
+            </IonBadge>
+          </IonItem>
+        </IonCardHeader>
+
+        <IonCardContent>
+          <IonCardTitle>{site_id}</IonCardTitle>
+          {details}
+        </IonCardContent>
+      </IonCard>
+    </IonItem>
+  );
+};
 export default Launchpadcard;

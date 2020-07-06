@@ -11,6 +11,11 @@ import {
   IonMenuButton,
   IonTitle,
   IonContent,
+  IonCardHeader,
+  IonItem,
+  IonBadge,
+  IonCardTitle,
+  IonCardContent,
 } from "@ionic/react";
 interface LaunchProps {
   id: string;
@@ -36,10 +41,20 @@ const Launchpadcomponent: React.FC<LaunchProps> = () => {
             <IonTitle size='large'>Launchepads</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <div className='container'>
-          <h1>Launchpad Component with ID : {id}</h1>
-        </div>
-        <IonButton expand='block'>Load More Data ...</IonButton>
+        {/* Card Arena Starts Here ... */}
+        <IonCard>
+          <IonCardHeader>
+            <IonItem class='ion-no-margin'>
+              <h3 ion-text='true' color='secondary'></h3>
+
+              <IonBadge slot='end' color='warning'></IonBadge>
+            </IonItem>
+          </IonCardHeader>
+
+          <IonCardContent>
+            <IonCardTitle></IonCardTitle>
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
