@@ -5,8 +5,6 @@ import { IonApp, IonRouterOutlet, IonSplitPane } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { Redirect, Route } from "react-router-dom";
 
-import { withRouter } from "react-router";
-
 // Single Components Required
 import Launchcomponent from "./components/singles/launch";
 import Launchpadcomponent from "./components/singles/launchpad";
@@ -38,30 +36,44 @@ import "./theme/variables.css";
 
 const App: React.FC = () => {
   return (
-    <IonReactRouter>
-      <IonSplitPane contentId='main'>
-        <Menu />
-        <IonRouterOutlet id='main'>
-          {/* Single Variable Params */}
-          <Route
-            exact={true}
-            path='/page/launch/:id'
-            component={Launchcomponent}
-          />
-          <Route
-            exact
-            path='/page/launchpad/:id'
-            component={Launchpadcomponent}
-          />
-          <Route exact path='/page/ship/:id' component={Shipcomponent} />
-          <Route exact path='/page/launches' component={Launchespage} />
-          <Route exact path='/page/launchpads' component={Launchpadspage} />
-          <Route exact path='/page/ships' component={Shipspage} />
-          <Redirect exact from='/page' to='/page/launches' />
-          <Redirect exact from='/' to='/page/launches' />
-        </IonRouterOutlet>
-      </IonSplitPane>
-    </IonReactRouter>
+    <IonApp>
+      <IonReactRouter>
+        <IonSplitPane contentId='main'>
+          <Menu />
+          <IonRouterOutlet id='main'>
+            {/* Single Variable Params */}
+            <Route
+              exact={true}
+              path='/page/launch/:id'
+              component={Launchcomponent}
+            />
+            <Route
+              exact
+              path='/page/launchpad/:id'
+              component={Launchpadcomponent}
+            />
+            <Route
+              exact={true}
+              path='/page/ship/:id'
+              component={Shipcomponent}
+            />
+            <Route
+              exact={true}
+              path='/page/launches'
+              component={Launchespage}
+            />
+            <Route
+              exact={true}
+              path='/page/launchpads'
+              component={Launchpadspage}
+            />
+            <Route exact={true} path='/page/ships' component={Shipspage} />
+            <Redirect exact={true} from='/page' to='/page/launches' />
+            <Redirect exact={true} from='/' to='/page/launches' />
+          </IonRouterOutlet>
+        </IonSplitPane>
+      </IonReactRouter>
+    </IonApp>
   );
 };
 

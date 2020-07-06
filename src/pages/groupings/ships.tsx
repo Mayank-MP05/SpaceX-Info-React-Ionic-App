@@ -55,7 +55,7 @@ const Shipspage: React.FC = () => {
       <IonContent>
         <IonHeader collapse='condense'>
           <IonToolbar>
-            <IonTitle size='large'>Launches</IonTitle>
+            <IonTitle size='large'>Ships</IonTitle>
           </IonToolbar>
         </IonHeader>
         {LaunchData.map((one, index) => {

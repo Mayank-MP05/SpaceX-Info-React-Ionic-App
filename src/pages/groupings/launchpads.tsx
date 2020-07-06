@@ -55,7 +55,7 @@ const Lauchpadspage: React.FC<LaunchProps> = () => {
       <IonContent>
         <IonHeader collapse='condense'>
           <IonToolbar>
-            <IonTitle size='large'>Launches</IonTitle>
+            <IonTitle size='large'>Launnchpad</IonTitle>
           </IonToolbar>
         </IonHeader>
         {LaunchData.map((one, index) => {

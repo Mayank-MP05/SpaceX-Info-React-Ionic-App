@@ -45,7 +45,7 @@ const Launchspage: React.FC<LaunchProps> = () => {
     console.log("Laucnhes UseEffect Called");
   }, []);
   return (
-    <>
+    <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot='start'>
@@ -68,7 +68,7 @@ const Launchspage: React.FC<LaunchProps> = () => {
           Load More Data ...
         </IonButton>
       </IonContent>
-    </>
+    </IonPage>
   );
 };
 
