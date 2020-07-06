@@ -10,7 +10,7 @@ import {
   IonItem,
   IonBadge,
 } from "@ionic/react";
-import { Link } from "react-router-dom";
+
 interface LaunchCardProps {
   id: number;
   flight_number: number;
