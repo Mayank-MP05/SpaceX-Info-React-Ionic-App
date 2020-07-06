@@ -13,21 +13,7 @@ import {
 
 import React from "react";
 import { useLocation } from "react-router-dom";
-import {
-  archiveOutline,
-  archiveSharp,
-  bookmarkOutline,
-  heartOutline,
-  heartSharp,
-  mailOutline,
-  mailSharp,
-  paperPlaneOutline,
-  paperPlaneSharp,
-  trashOutline,
-  trashSharp,
-  warningOutline,
-  warningSharp,
-} from "ionicons/icons";
+import { boatOutline, rocketOutline, bonfireOutline } from "ionicons/icons";
 import "./Menu.css";
 
 interface AppPage {
@@ -41,20 +27,20 @@ const appPages: AppPage[] = [
   {
     title: "Launches",
     url: "/",
-    iosIcon: mailOutline,
-    mdIcon: mailSharp,
+    iosIcon: rocketOutline,
+    mdIcon: rocketOutline,
   },
   {
     title: "Launchpads",
     url: "/page/launchpads",
-    iosIcon: mailOutline,
-    mdIcon: mailSharp,
+    iosIcon: bonfireOutline,
+    mdIcon: bonfireOutline,
   },
   {
     title: "Ships",
     url: "/page/ships",
-    iosIcon: mailOutline,
-    mdIcon: mailSharp,
+    iosIcon: boatOutline,
+    mdIcon: boatOutline,
   } /*,
   {
     title: "Inbox",
