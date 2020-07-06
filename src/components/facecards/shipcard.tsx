@@ -12,7 +12,7 @@ import {
   IonBadge,
   IonImg,
 } from "@ionic/react";
-interface LaunchCardProps {
+interface ShipCardProps {
   ship_id: string;
   ship_name: string;
   ship_type: string;
@@ -21,7 +21,7 @@ interface LaunchCardProps {
   image?: string;
 }
 
-const Shipcard: React.FC<LaunchCardProps> = ({
+const Shipcard: React.FC<ShipCardProps> = ({
   ship_id,
   ship_name,
   ship_type,
@@ -30,7 +30,7 @@ const Shipcard: React.FC<LaunchCardProps> = ({
   image,
 }) => {
   return (
-    <IonItem routerLink={`/page/launch/${ship_id}`}>
+    <IonItem routerLink={`/page/ship/${ship_id}`}>
       <IonCard>
         <IonCardHeader>
           <IonItem class='ion-no-margin'>
