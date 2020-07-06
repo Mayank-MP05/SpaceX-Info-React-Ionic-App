@@ -16,7 +16,7 @@ const Launchcomponent: React.FC = () => {
   const { id } = useParams<{ id: string }>();
 
   return (
-    <>
+    <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot='start'>
@@ -37,7 +37,7 @@ const Launchcomponent: React.FC = () => {
         </div>
         <IonButton expand='block'>Load More Data ...</IonButton>
       </IonContent>
-    </>
+    </IonPage>
   );
 };
 

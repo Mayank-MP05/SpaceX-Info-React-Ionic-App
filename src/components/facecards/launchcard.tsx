@@ -8,6 +8,7 @@ import {
   IonCardContent,
   IonRouterLink,
   IonItem,
+  IonBadge,
 } from "@ionic/react";
 import { Link } from "react-router-dom";
 interface LaunchCardProps {
@@ -34,11 +35,21 @@ const Launchcard: React.FC<LaunchCardProps> = ({
     <IonItem routerLink={`/page/launch/${flight_number}`}>
       <IonCard>
         <IonCardHeader>
-          <IonCardSubtitle>{mission_name}</IonCardSubtitle>
-          <IonCardTitle>{launch_site.site_name_long}</IonCardTitle>
+          <IonItem class='ion-no-margin'>
+            <h3 ion-text='true' color='secondary'>
+              {mission_name}
+            </h3>
+
+            <IonBadge slot='end' color='warning'>
+              {flight_number}
+            </IonBadge>
+          </IonItem>
         </IonCardHeader>
 
-        <IonCardContent>{details}</IonCardContent>
+        <IonCardContent>
+          <IonCardTitle>{launch_site.site_name_long}</IonCardTitle>
+          {details}
+        </IonCardContent>
       </IonCard>
     </IonItem>
   );
