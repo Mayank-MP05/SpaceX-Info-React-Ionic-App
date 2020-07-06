@@ -1,5 +1,5 @@
 {
-  "name": "sideme",
+  "name": "SpaceX React Ionic App",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -46,5 +46,5 @@
       "last 1 safari version"
     ]
   },
-  "description": "An Ionic project"
+  "description": "SpaceX React Ionic App built using widely popular SpaceX Api"
 }

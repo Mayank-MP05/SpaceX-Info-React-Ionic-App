@@ -31,7 +31,7 @@ const Launchpadcard: React.FC<LaunchpadCardProps> = ({
 }) => {
   return (
     <IonItem routerLink={`/page/launchpad/${site_id}`}>
-      <IonCard>
+      <IonCard style={{ width: "100%" }}>
         <IonCardHeader>
           <IonItem class='ion-no-margin'>
             <h3 ion-text='true' color='secondary'>

@@ -90,8 +90,8 @@ const Menu: React.FC = () => {
   const location = useLocation();
 
   return (
-    <IonMenu contentId='main' type='overlay'>
-      <IonContent>
+    <IonMenu contentId='main' type='overlay' class='ion-no-padding'>
+      <IonContent class='ion-no-padding'>
         <IonList id='inbox-list'>
           <IonImg src='https://d2c7ipcroan06u.cloudfront.net/wp-content/uploads/2019/12/SpaceX_rev-696x392.jpg' />
           <IonListHeader class='ion-margin-top ion-margin-bottom'>

@@ -33,7 +33,7 @@ const Launchcard: React.FC<LaunchCardProps> = ({
 }) => {
   return (
     <IonItem routerLink={`/page/launch/${flight_number}`}>
-      <IonCard>
+      <IonCard style={{ width: "100%" }}>
         <IonCardHeader>
           <IonItem class='ion-no-margin'>
             <h3 ion-text='true' color='secondary'>

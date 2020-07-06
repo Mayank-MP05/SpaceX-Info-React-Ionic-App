@@ -11,6 +11,7 @@ import {
   IonItem,
   IonBadge,
   IonImg,
+  IonText,
 } from "@ionic/react";
 interface ShipCardProps {
   ship_id: string;
@@ -31,7 +32,7 @@ const Shipcard: React.FC<ShipCardProps> = ({
 }) => {
   return (
     <IonItem routerLink={`/page/ship/${ship_id}`}>
-      <IonCard>
+      <IonCard style={{ width: "100%" }}>
         <IonCardHeader>
           <IonItem class='ion-no-margin'>
             <h3 ion-text='true' color='secondary'>
@@ -39,14 +40,13 @@ const Shipcard: React.FC<ShipCardProps> = ({
             </h3>
 
             <IonBadge slot='end' color='warning'>
-              {ship_type} : {year_built}
+              {ship_type}
             </IonBadge>
           </IonItem>
         </IonCardHeader>
 
         <IonCardContent>
-          <IonCardTitle>{home_port}</IonCardTitle>
-          {image ? <IonImg src={image} /> : ""}
+          <IonText>{home_port}</IonText>
         </IonCardContent>
       </IonCard>
     </IonItem>
