@@ -48,7 +48,7 @@ const Lauchpadspage: React.FC<LaunchProps> = () => {
           <IonButtons slot='start'>
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Launches</IonTitle>
+          <IonTitle>Launchpads</IonTitle>
         </IonToolbar>
       </IonHeader>
 

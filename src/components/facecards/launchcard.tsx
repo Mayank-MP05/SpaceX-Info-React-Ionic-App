@@ -1,6 +1,15 @@
 import React from "react";
-import { IonButton, IonCard } from "@ionic/react";
-
+import {
+  IonButton,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCard,
+  IonCardContent,
+  IonRouterLink,
+  IonItem,
+} from "@ionic/react";
+import { Link } from "react-router-dom";
 interface LaunchCardProps {
   id: number;
   flight_number: number;
@@ -10,19 +19,28 @@ interface LaunchCardProps {
     region: string;
   };
   mission_name: string;
+  launch_site: {
+    site_name_long: string;
+  };
 }
 
 const Launchcard: React.FC<LaunchCardProps> = ({
   flight_number,
   details,
   mission_name,
+  launch_site,
 }) => {
   return (
-    <IonCard>
-      <h4>Flight No : {flight_number}</h4>
-      <h4>Details: {details}</h4>
-      <h4>missionName : {mission_name}</h4>
-    </IonCard>
+    <IonItem routerLink={`/page/launch/${flight_number}`}>
+      <IonCard>
+        <IonCardHeader>
+          <IonCardSubtitle>{mission_name}</IonCardSubtitle>
+          <IonCardTitle>{launch_site.site_name_long}</IonCardTitle>
+        </IonCardHeader>
+
+        <IonCardContent>{details}</IonCardContent>
+      </IonCard>
+    </IonItem>
   );
 };
 export default Launchcard;

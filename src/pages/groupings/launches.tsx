@@ -26,6 +26,7 @@ const Launchspage: React.FC<LaunchProps> = () => {
   const callApi = () => {
     Axios.get("https://api.spacexdata.com/v3/launches").then((res) => {
       setAPIdata(res.data);
+      console.log(res.data);
       setLaunchData(res.data.slice(0, 10));
       setLoading(false);
     });
@@ -44,7 +45,7 @@ const Launchspage: React.FC<LaunchProps> = () => {
     console.log("Laucnhes UseEffect Called");
   }, []);
   return (
-    <IonPage>
+    <>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot='start'>
@@ -67,7 +68,7 @@ const Launchspage: React.FC<LaunchProps> = () => {
           Load More Data ...
         </IonButton>
       </IonContent>
-    </IonPage>
+    </>
   );
 };
 

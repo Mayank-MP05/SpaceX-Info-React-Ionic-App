@@ -48,7 +48,7 @@ const Shipspage: React.FC = () => {
           <IonButtons slot='start'>
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Launches</IonTitle>
+          <IonTitle>Ships</IonTitle>
         </IonToolbar>
       </IonHeader>
 
