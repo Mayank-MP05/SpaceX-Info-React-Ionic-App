@@ -12,7 +12,9 @@ import {
   IonBadge,
   IonImg,
   IonText,
+  IonIcon
 } from "@ionic/react";
+import { boatOutline, rocketOutline, bonfireOutline } from "ionicons/icons";
 interface ShipCardProps {
   ship_id: string;
   ship_name: string;
@@ -35,6 +37,11 @@ const Shipcard: React.FC<ShipCardProps> = ({
       <IonCard style={{ width: "100%" }}>
         <IonCardHeader>
           <IonItem class='ion-no-margin'>
+          <IonIcon
+                    slot='start'
+                    ios={boatOutline}
+                    md={boatOutline}
+                  />
             <h3 ion-text='true' color='secondary'>
               {ship_name}
             </h3>

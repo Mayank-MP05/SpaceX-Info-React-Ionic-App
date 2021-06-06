@@ -20,8 +20,10 @@ import {
   IonItemDivider,
   IonGrid,
   IonImg,
+  IonIcon
 } from "@ionic/react";
 import Axios from "axios";
+import { boatOutline, rocketOutline, bonfireOutline } from "ionicons/icons";
 
 interface ShipProps {
   ship_id: string;
@@ -84,6 +86,11 @@ const Shipcomponent: React.FC<ShipProps> = () => {
           <IonCard>
             <IonCardHeader>
               <IonItem class='ion-no-margin'>
+              <IonIcon
+                    slot='start'
+                    ios={boatOutline}
+                    md={boatOutline}
+                  />
                 <h3 ion-text='true' color='secondary'>
                   {APIdata.ship_name}
                 </h3>

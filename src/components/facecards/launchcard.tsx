@@ -8,9 +8,11 @@ import {
   IonCardContent,
   IonRouterLink,
   IonItem,
+  IonIcon,
   IonBadge,
 } from "@ionic/react";
 
+import { boatOutline, rocketOutline, bonfireOutline } from "ionicons/icons";
 interface LaunchCardProps {
   id: number;
   flight_number: number;
@@ -36,6 +38,11 @@ const Launchcard: React.FC<LaunchCardProps> = ({
       <IonCard style={{ width: "100%" }}>
         <IonCardHeader>
           <IonItem class='ion-no-margin'>
+          <IonIcon
+                    slot='start'
+                    ios={rocketOutline}
+                    md={rocketOutline}
+                  />
             <h3 ion-text='true' color='secondary'>
               {mission_name}
             </h3>

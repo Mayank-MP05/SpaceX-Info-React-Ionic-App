@@ -15,6 +15,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { boatOutline, rocketOutline, bonfireOutline } from "ionicons/icons";
 import "./Menu.css";
+import menuImg from "./../assets/spaceX_poster.jpg"
 
 interface AppPage {
   url: string;
@@ -93,11 +94,11 @@ const Menu: React.FC = () => {
     <IonMenu contentId='main' type='overlay' class='ion-no-padding'>
       <IonContent class='ion-no-padding'>
         <IonList id='inbox-list'>
-          <IonImg src='https://d2c7ipcroan06u.cloudfront.net/wp-content/uploads/2019/12/SpaceX_rev-696x392.jpg' />
+          <IonImg src={menuImg} />
           <IonListHeader class='ion-margin-top ion-margin-bottom'>
-            SpaceX
+            Elon Musk, CEO
           </IonListHeader>
-          <IonNote>Elon_Musk@SpaceX.com</IonNote>
+          <IonNote>elonmusk@spacex.com</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>

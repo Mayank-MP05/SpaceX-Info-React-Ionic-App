@@ -20,7 +20,10 @@ import {
   IonRow,
   IonCol,
   IonImg,
+  IonIcon
 } from "@ionic/react";
+
+import { boatOutline, rocketOutline, bonfireOutline } from "ionicons/icons";
 import Axios from "axios";
 interface LaunchCardProps {
   id: number;
@@ -89,6 +92,11 @@ const Launchcomponent: React.FC = () => {
           <IonCard>
             <IonCardHeader>
               <IonItem class='ion-no-margin'>
+              <IonIcon
+                    slot='start'
+                    ios={rocketOutline}
+                    md={rocketOutline}
+                  />
                 <h3 ion-text='true' color='secondary'>
                   {APIdata.mission_name}
                 </h3>

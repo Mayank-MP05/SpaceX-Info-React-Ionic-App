@@ -21,8 +21,11 @@ import {
   IonRow,
   IonCol,
   IonGrid,
+  IonIcon
 } from "@ionic/react";
 import Axios from "axios";
+
+import { boatOutline, rocketOutline, bonfireOutline } from "ionicons/icons";
 
 interface LaunchpadCardProps {
   id: number;
@@ -67,14 +70,14 @@ const Launchpadcomponent: React.FC<LaunchpadCardProps> = () => {
           <IonButtons slot='start'>
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Launchepad</IonTitle>
+          <IonTitle>Launchpad</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent>
         <IonHeader collapse='condense'>
           <IonToolbar>
-            <IonTitle size='large'>Launchepad</IonTitle>
+            <IonTitle size='large'>Launchpad</IonTitle>
           </IonToolbar>
         </IonHeader>
         {/* Card Arena Starts Here ... */}
@@ -82,6 +85,11 @@ const Launchpadcomponent: React.FC<LaunchpadCardProps> = () => {
           <IonCard>
             <IonCardHeader>
               <IonItem class='ion-no-margin'>
+              <IonIcon
+                    slot='start'
+                    ios={bonfireOutline}
+                    md={bonfireOutline}
+                  />
                 <IonCardTitle color='secondary'>
                   {APIdata.site_name_long}
                 </IonCardTitle>
